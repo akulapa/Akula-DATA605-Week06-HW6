@@ -521,7 +521,7 @@ $P(E_1|E)$ =  $P$(individual actually lied _given_ polygraph predicted as liar)
 
 $P(E_1|E)$ = $\frac{`r poly.data[1,1]`}{`r poly.data[1,1]` + `r poly.data[1,2]`}$ = $`r round(poly.data[1,1]/(poly.data[1,1] + poly.data[1,2]),4)`$
 
-Probability that an individual is actually a liar given that the polygraph predicted as liar = $`r round(poly.data[1,1]/(poly.data[1,1] + poly.data[1,2]),4)`$
+Probability that an individual is actually a liar given that the polygraph predicted as liar = $`r round(poly.data[1,1]/(poly.data[1,1] + poly.data[1,2]),4) * 100` \%$
 
 **_b. What is the probability that an individual is actually a truth-teller given that the polygraph detected him/her as such? (Show me the table or the formulaic solution or both.)_**
 
@@ -552,7 +552,7 @@ $P(E_1|E)$ =  $P$(individual actually is a truth-teller _given_ polygraph predic
 
 $P(E_1|E)$ = $\frac{`r poly.data[2,2]`}{`r poly.data[2,1]` + `r poly.data[2,2]`}$ = $`r round(poly.data[2,2]/(poly.data[2,1] + poly.data[2,2]),4)`$
 
-Probability that an individual is actually a truth-teller given that the polygraph detected as truth-teller = $`r round(poly.data[2,2]/(poly.data[2,1] + poly.data[2,2]),4)`$
+Probability that an individual is actually a truth-teller given that the polygraph detected as truth-teller = $`r round(poly.data[2,2]/(poly.data[2,1] + poly.data[2,2]),4) * 100` \%$
 
 **_c. What is the probability that a randomly selected individual is either a liar or was identified as a liar by the polygraph? Be sure to write the probability statement._**
 
@@ -566,7 +566,7 @@ The probability that a randomly selected individual is either a liar or was iden
 
 $P(A\ or\ I) = 0.20 + 0.198 - 0.118 = `r 0.20 + 0.198 - 0.118`$
 
-Probability that a randomly selected individual is either a liar or was identified as a liar by the polygraph = $`r 0.20 + 0.198 - 0.118`$
+Probability that a randomly selected individual is either a liar or was identified as a liar by the polygraph = $`r round(0.20 + 0.198 - 0.118,4) * 100` \%$
 
 References:
 
