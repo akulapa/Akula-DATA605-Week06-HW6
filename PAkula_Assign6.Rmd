@@ -117,7 +117,7 @@ Number of vegetables $V$ = 8
 
 Number of condiments $C$ = 7
 
-Variety of tortillas available  $T$ = 4
+Variety of tortillas available  $T$ = 3
 
 To make a veggie wrap we need $W = T  + 3V + 3C$
 
@@ -127,11 +127,11 @@ Combination of 3 condiments from 7 available choices = $C(7,3)$ = $7_{C_3}$ = $\
 
 Veggie wrap $W$ = (Combination of 3 vegetables from 8 available choices) X (Combination of 3 condiments from 7 possible options) X (Choice of tortilla)
 
-$W$ = $`r choose(8,3)`$ * $`r choose(7,3)`$ * $4$
+$W$ = $`r choose(8,3)`$ * $`r choose(7,3)`$ * $3$
 
-$W$ = $`r choose(8,3) * choose(7,3) * 4`$
+$W$ = $`r choose(8,3) * choose(7,3) * 3`$
 
-Therefore, we can make a total of $`r choose(8,3) * choose(7,3) * 4`$ veggie wraps.
+Therefore, we can make a total of $`r choose(8,3) * choose(7,3) * 3`$ veggie wraps.
 
 Using _R_ functions,
 
@@ -147,7 +147,7 @@ v<- choose(8,3)
 c<- choose(7,3)
 
 #choice of tortilla = 4
-t<- 4
+t<- 3
 #number of veggie wraps
 w<- v*c*t
 
@@ -162,7 +162,7 @@ con.combination<- apply(t(combn(con, 3)), 1, paste, collapse="+")
 con.combination<- data.frame(C=con.combination,stringsAsFactors = F)
 
 #tortilla
-tor.combination<- data.frame(T = c('T1','T2','T3','T4'))
+tor.combination<- data.frame(T = c('T1','T2','T3'))
 
 wrap<- tor.combination %>% 
   expand(tor.combination, V = veg.combination$V, C = con.combination$C) %>%
